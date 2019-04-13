@@ -18,8 +18,11 @@ class PeopleController extends Controller {
 
         $dados = People::all();
 
-//        dd($dados);
-//        exit;
+        
+        $dados["count"] = 5;
+        
+        dd($dados);
+        exit;
 
         return view('people/peopleview', ['dados' => $dados]);
     }
